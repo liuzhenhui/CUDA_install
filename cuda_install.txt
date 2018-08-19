@@ -1,0 +1,60 @@
+holly shit 
+this install take me 3hours 
+ 
+=================================
+1): install the nvidia driver 
+	I choose version 384  cause of the cuda define install version of 384,so i choose it 
+in this web  choose your computer can used version
+	https://www.nvidia.cn/Download/index.aspx?lang=cn
+then:
+	<1 $sudo add-apt-repository ppa:graphics-drivers/ppa  /*find the source into the get install*/
+	<2 $sudo apt-get update				/*updata*/
+	<3 $sudo apt-get install nvidia-384                /*384 can repate*/ 
+	<4 $sudo reboot 
+	<5 $sudo nvidia-smi   /* or */ sudo nvidia-settings
+
+	In this installing ,you will very sucessful . maybe in the <1 you will get some error ,dont take care about it  just run the next.
+
+2): install the CUDA
+	I choose version 9.0 . you can get more version you want.
+in this web choose your version . you can find the passed version in ... 
+	https://developer.nvidia.com/cuda-toolkit
+next:
+	cd  path   /*path: your .run file in */ 
+	sudo sh cuda_9.0.176_384.81_linux.run
+
+	there are some things you should take care.The first ask you install 384 driver? you should chosse no  ,beacuse of you have installed it . the next ask you install cuda ? yes . install samples  yes . install ... yes.and you will be asked some path just default is great the cuda installed in /usr/local/ . ok  .run it  . you will get some error  .it dosent matter .but if you got some wrong  ,just google or baidu search ... hahaha .. 
+	when you finish top install .you have installed the cuda .just check it.
+	    cat /usr/local/cuda/version.txt
+	if  you can see : CUDA Version 9.0.176 . ok
+	or run the sample:
+	    cd  /usr/local/cuda-9.0/samples/1_Utilities/deviceQuery
+　　　	    sudo make
+　　　	    ./deviceQuery
+	if you get result == pass   .ok
+
+Have fun !
+
+	
+
+
+
+
+
+I didnt do this :
+    配置环境变量，运行如下命令打开profile文件
+
+　　　　sudo gedit  /etc/profile
+
+　　打开文件后在文件末尾添加路径，也就是安装目录，命令如下：
+
+　　　　export  PATH=/usr/local/cuda-9.0/bin:$PATH
+
+　　　　export  LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64$LD_LIBRARY_PATH　
+
+
+	
+thanks:
+	https://www.cnblogs.com/iloveblog/p/7683349.html
+
+

@@ -5,9 +5,10 @@ this install take me 3hours
 	I choose version 384  cause of the cuda define install version of 384,so i choose it 
 in this web  choose your computer can used version
 	https://www.nvidia.cn/Download/index.aspx?lang=cn
+	PS:960 VS 960M .  960M if for notebook 
 then:
 	<1 $sudo add-apt-repository ppa:graphics-drivers/ppa  /*find the source into the get install*/
-	<2 $sudo apt-get update				/*updata*/
+	<2 $sudo apt-get update				   /*updata*/
 	<3 $sudo apt-get install nvidia-384                /*384 can repate*/ 
 	<4 $sudo reboot 
 	<5 $sudo nvidia-smi   /* or */ sudo nvidia-settings
